@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:background-image="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>СОГЛАСИЕ</title>
+</head>
+<body>
+	<!--Меню-->
+	<div class="nav">
+		<a href="#">Онлайн-обучение</a>
+		<a href="#">Проекты</a>
+		<a href="#">Библиотека</a>
+		<a href="#">Форумы</a>
+	</div>
+	
+	<!--Первый блок с кнопками регистрации и входа-->
+	<div class="block1">
+		<div class="library">
+			<h2>Корпоративная библиотека</h2>
+			<p>
+				Приглашаем в Корпоративную электронную библиотеку!
+				<br>
+				Зарегестрируйтесь и читайте самые интересные
+				<br>
+				книги безлимитно, круглосуточно, бесплатно.
+			</p>
+			<a href="#"><button id="enter" onclick="checkReg('block')">Войти в библиотеку</button></a>
+			<a href="#"><button	id="regist" onclick="showRegForm('block'); checkReg('block')">Зарегестрироваться</button></a>
+		</div>
+		<div class="img">
+			<img src="img/library.png" alt="library">
+		</div>
+	</div>
+
+	<!--Блок с надписью -->
+
+	<div class="block2">
+		<p>Корпоративная библиотека - это возможность:</p>
+	</div>
+
+
+
+	<!--Блок с возможностями -->
+
+	<div class="container" >
+
+		<div class="possibility">
+			<div class="update">
+				<img src="img/i01.png" alt="">
+				<p>Обновлять <br>деловые <br>компетенции</p>
+			</div>
+			<div class="development">
+				<img src="img/i02.png" alt="">
+				<p>Профессионально <br>развиваться</p>
+			</div>
+			<div class="effective">
+				<img src="img/i03.png" alt="">
+				<p>Эфективнее <br>справляться с <br>текущей работой</p>
+			</div>
+			<div class="trend">
+				<img src="img/i04.png" alt="">
+				<p>Быть в курсе <br>современных <br>бизнес-тенденций</p>
+			</div>
+		</div>
+	</div>
+
+	<!--Форма регистрации-->
+
+	<div id="window_registration">
+		<div class="wrapper_reg_form">
+			<a href="./index.html"><img src="./img/krest.png" alt="close"></a>
+			<h2>Регистрация в библиотеке</h2>
+			<form  method="post">
+				<p>Пожалуйста введите информацию:</p>
+				<input type="text" placeholder="Имя" class="input" id="username" value="" required>
+				<br>
+				<input type="text" placeholder="Фамилия" class="input" id="surname" value=""
+				required>
+				<br>
+				<input type="email" placeholder="Электронная почта" class="input" id="email" value="" required>
+				<br>
+
+	<!--Чекбоксы-->
+
+				<p>Выберите пол:</p>
+				<input id="man" type="checkbox" value=""> Мужской
+				<br>
+				<input class="stat" id="woman" type="checkbox" value=""> Женский
+				<br>
+
+				<button id="continue" type="button" onclick="createUser((successReg('block')))">Продолжить</button>
+			</form>
+		</div>
+	</div>
+
+	<!--Форма об успешной регистрации-->
+
+	<div id="success">
+		<img src="./img/star.png" alt="star">
+		<p>Вы успешно зарегестрированы!<br>
+		Логин и пароль отправлен на вашу электронную почту<br>
+		Нажмите "Войти" на странице библиотеки, чтобы начать читать и развиваться</p>
+		<a href="https://www.mann-ivanov-ferber.ru/b2b/library/" target="_blank"><button>Войти в библиотеку</button></a>
+	</div>
+
+	<!--Форма авторизации-->
+
+	<div id="auth">
+		<img src="./img/star.png" alt="star">
+		<p>Вы уже были зарегестрированы!</p>
+		<a href="https://www.mann-ivanov-ferber.ru/b2b/library/" target="_blank"><button>Войти в библиотеку</button></a>
+	</div>
+
+	<!--Серый фон для всплывающих окон-->
+
+	<div id="grey" onclick="showRegForm('none'); successReg('none'); checkReg('none'); createUser('none')"></div>
+
+	<div class="footer">
+		<p>OOO&laquo;СК&laquo;СОГЛАСИЕ&raquo;</p>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
